@@ -47,3 +47,5 @@ write.csv(merged_df, "merged_df.csv")
 
 #average of each variable for each activit and each subject
 mean_merged <- merged_df %>% group_by(SubjectID, ActivityID) %>% summarize_each(funs(mean))
+
+write.table(mean_merged, "mean_merged.txt", row.names = F)
